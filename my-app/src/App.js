@@ -28,6 +28,7 @@ let photoData;
 
 const FetchPhotos = async () =>
 {
+    // visit: https://stackoverflow.com/questions/36911241/how-to-extract-data-out-of-a-promise
     let response = await fetch("https://elle-christine-api.azurewebsites.net/api/photos");
     let json = await response.json();
     return json;
