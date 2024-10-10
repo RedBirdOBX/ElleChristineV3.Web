@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PhotoList from './Components/PhotoList';
-
 
 const initPhotos =
 [
@@ -24,21 +23,52 @@ const initPhotos =
     }
 ];
 
-let photoData;
-
-const FetchPhotos = async () =>
-{
-    // visit: https://stackoverflow.com/questions/36911241/how-to-extract-data-out-of-a-promise
-    let response = await fetch("https://elle-christine-api.azurewebsites.net/api/photos");
-    let json = await response.json();
-    return json;
-};
 
 const App = () =>
 {
 
-    // wtf is this not an array??
-    photoData = FetchPhotos();
+    const [photoData, setPhotoData] = useState(initPhotos);
+    const [isLoading, setIsLoading] = useState(true);
+    const [error, setError] = useState(null);
+
+    useEffect(() => {
+        const fetchPhotos = async () =>
+        {
+            try
+            {
+                const response = await fetch("https://elle-christine-api.azurewebsites.net/api/photos");
+                if (!response.ok)
+                {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
+                const json = await response.json();
+                setPhotoData(json);
+                setIsLoading(false);
+
+            }
+            catch (error)
+            {
+                console.error("Fetching photos failed:", error);
+                setError(error.message);
+                setIsLoading(false);
+            }
+        };
+
+        fetchPhotos();
+    }, []);
+
+
+    if (isLoading)
+    {
+        return (<div>Loading...</div>);
+    }
+
+    if (error)
+    {
+        return <div>Error: {error}</div>;
+    }
+
 
     return (
         <div>
