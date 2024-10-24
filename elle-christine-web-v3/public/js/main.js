@@ -119,9 +119,10 @@
         // sections background image from data background
         var pageSection = $(".parallax,.bg-img");
         pageSection.each(function(indx) {
-
+            alert("hello");
             if ($(this).attr("data-background"))
             {
+
                 $(this).css("background-image", "url(" + $(this).data("background") + ")");
             }
         });
