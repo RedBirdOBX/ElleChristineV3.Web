@@ -1,7 +1,37 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const UpcomingComponent = (props) =>
 {
+    const [nextShow, setNextShow] = useState({});
+
+    // call api for next show
+    useEffect(() => {
+        const fetchNextShow = async () =>
+        {
+            try
+            {
+                const response = await fetch("https://elle-christine-api.azurewebsites.net/api/shows/nextshow");
+                if (!response.ok)
+                {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
+                const json = await response.json();
+                console.log(json);
+                setNextShow(json);
+
+            }
+            catch (error)
+            {
+                console.error("Fetching next show failed:", error);
+            }
+        };
+
+        fetchNextShow();
+    }, []);
+
+
     return (
         <section className="bg-light-gray">
             <div className="container">
@@ -9,7 +39,8 @@ const UpcomingComponent = (props) =>
                     <div className="row align-items-center">
                         <div className="col-lg-6">
                             <div className="text-center">
-                                <img src="~/imgs/content/gigs/@Model.Image" alt="@Model.Location" />
+                                <img src={`imgs/content/gigs/${nextShow.image}`}
+                                        alt={`${nextShow.title}`} />
                             </div>
 
                         </div>
@@ -17,39 +48,50 @@ const UpcomingComponent = (props) =>
                             <div>
 
                                 <div className="p-1-6 p-md-1-9">
-                                    <h3>Next Show - @Model.Title</h3>
+                                    <h3>Next Show - {nextShow.title}</h3>
 
                                     <div className="row">
-                                        <div className="col-6"><h6>@Model.Date.ToString("D")</h6></div>
+                                        <div className="col-6">
+                                            {/* format the time */}
+                                            <h6>{nextShow.date}</h6>
+                                        </div>
                                         <div className="col-6">
                                             <h6>
-                                                @Model.Location<br />
-                                                @Model.Time
+                                                {nextShow.location}<br />
+                                                {nextShow.time}
                                             </h6>
                                         </div>
                                     </div>
 
                                     <p>
-                                        @Html.Raw(Model.Description)
+                                        {/* decode html */}
+                                        {nextShow.description}
                                     </p>
 
-                                    <div class="row">
+                                    <div className="row">
                                         <div className="col-6">
-                                        @if (!string.IsNullOrWhiteSpace(Model.Url))
-                                        {
-                                        <a target="_blank" href="@Model.Url">
-                                            <span className="fa fa-2x fa-globe fa-fw"></span>@Model.Title
-                                        </a>
-                                        }
+
+                                            {/* conditionally show this is url is not null */}
+                                            {/* @if (!string.IsNullOrWhiteSpace(Model.Url)) */}
+
+                                            <Link target="_blank" alt="location" to={nextShow.url}>
+                                                <span className="fa fa-2x fa-globe fa-fw"></span>{nextShow.title}
+                                            </Link>
+
                                         </div>
-                                        <div class="col-6">
-                                        <a target="_blank" href="@Model.MapUrl">
-                                            <span className="fa fa-2x fa-map-marker"></span>&nbsp;map
-                                        </a>
+
+                                        <div className="col-6">
+                                            <Link target="_blank" alt="location" to={nextShow.mapUrl}>
+                                                <span className="fa fa-2x fa-map-marker"></span>&nbsp;Map
+                                            </Link>
                                         </div>
                                     </div>
 
-                                    <a href="/Shows" className="butn medium theme mt-4"><span>More Shows</span></a>
+                                    <Link to="/Shows"
+                                        className="butn medium theme mt-4">
+                                        <span>More Shows</span>
+                                    </Link>
+
                                 </div>
 
                             </div>

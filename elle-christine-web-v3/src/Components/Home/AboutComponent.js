@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const AboutComponent = (props) =>
 {
@@ -9,7 +10,8 @@ const AboutComponent = (props) =>
                         <div className="row align-items-center">
                             <div className="col-lg-6">
                                 <div className="text-center">
-                                    <img src="~/imgs//content/home/about-elle.png" alt="Elle Christine" />
+                                    <img src="imgs/content/home/about-elle.png"
+                                            alt="Elle Christine" />
                                 </div>
                             </div>
                             <div className="col-lg-6">
@@ -25,7 +27,10 @@ const AboutComponent = (props) =>
                                             into a multifaceted sound integration – neo alternative indie-folk dipped in rock, groove, and soul.
                                             This lyrically charged music will make you feel like tapping your feet.
                                         </p>
-                                        <a href="/About" class="butn medium theme mt-4"><span>Read More</span></a>
+                                        <Link to="/About"
+                                            className="butn medium theme mt-4">
+                                            <span>Read More</span>
+                                        </Link>
                                     </div>
 
                                 </div>

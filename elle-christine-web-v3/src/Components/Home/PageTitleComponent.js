@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const PageTitleComponent = (props) =>
 {
@@ -22,9 +23,10 @@ const PageTitleComponent = (props) =>
                                 Connect with the human experiences of love, loss, and overcoming hardship.
                             </p>
                             <div className="mt-1-9 text-center">
-                                <a href="/Shows" className="butn btn-lg primary white-hover">
+                                <Link to="/Shows"
+                                    className="butn btn-lg primary white-hover">
                                     <span>Upcoming Shows</span>
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>

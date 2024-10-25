@@ -8,8 +8,8 @@ const HomeComponent = (props) =>
     return (
         <div>
           <PageTitleComponent />
-          {/* <AboutComponent />
-          <UpcomingComponent /> */}
+          <AboutComponent />
+          <UpcomingComponent />
         </div>
     );
 };
