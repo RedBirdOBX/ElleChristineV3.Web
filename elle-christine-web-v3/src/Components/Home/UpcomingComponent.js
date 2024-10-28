@@ -53,7 +53,7 @@ const UpcomingComponent = (props) =>
                                     <div className="row">
                                         <div className="col-6">
                                             {/* format the time */}
-                                            <h6>{nextShow.date}</h6>
+                                            <h6>{nextShow.date.toDateString()}</h6>
                                         </div>
                                         <div className="col-6">
                                             <h6>
