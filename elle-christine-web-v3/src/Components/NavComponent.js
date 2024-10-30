@@ -25,12 +25,14 @@ const NavComponent = (props) =>
 
                                 <ul className="navbar-nav ms-auto" id="nav" style={{display: 'none'}}>
                                     <li>
-                                        <Link to="/HomeComponent">
+                                        <Link to="/">
                                             Home
                                         </Link>
                                     </li>
                                     <li>
-                                        <a href="/About" title="About">About</a>
+                                        <Link to="/About">
+                                            About
+                                        </Link>
                                     </li>
                                     <li>
                                         <a href="/Shows" title="Shows">Shows</a>

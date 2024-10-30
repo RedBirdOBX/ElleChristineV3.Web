@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const PageTitleComponent = (props) =>
+const HomePageTitleComponent = (props) =>
 {
     let imgNumber = (Math.ceil(Math.random() * 2));
 
@@ -37,4 +37,4 @@ const PageTitleComponent = (props) =>
     );
 };
 
-export default PageTitleComponent;
+export default HomePageTitleComponent;

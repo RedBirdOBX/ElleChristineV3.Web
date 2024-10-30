@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const AboutComponent = (props) =>
+const AboutElleHomeComponent = (props) =>
 {
     return (
             <section>
@@ -44,4 +44,4 @@ const AboutComponent = (props) =>
     );
 };
 
-export default AboutComponent;
+export default AboutElleHomeComponent;

@@ -4,9 +4,11 @@ import { Link } from 'react-router-dom';
 const UpcomingComponent = (props) =>
 {
     const [nextShow, setNextShow] = useState({});
+    const [nextShowDateDisplay, setNextShowDateDisplay] = useState("");
 
     // call api for next show
-    useEffect(() => {
+    useEffect(() =>
+    {
         const fetchNextShow = async () =>
         {
             try
@@ -17,10 +19,13 @@ const UpcomingComponent = (props) =>
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
 
+                // obj
                 const json = await response.json();
-                console.log(json);
+                //console.log(json);
                 setNextShow(json);
 
+                // set date display string
+                setNextShowDateDisplay((new Date(json.date)).toDateString());
             }
             catch (error)
             {
@@ -48,12 +53,12 @@ const UpcomingComponent = (props) =>
                             <div>
 
                                 <div className="p-1-6 p-md-1-9">
-                                    <h3>Next Show - {nextShow.title}</h3>
+                                    <h3 className="text-primary">Next Show</h3>
+                                    <h5>{nextShow.title}</h5>
 
                                     <div className="row">
                                         <div className="col-6">
-                                            {/* format the time */}
-                                            <h6>{nextShow.date.toDateString()}</h6>
+                                            <h6>{nextShowDateDisplay}</h6>
                                         </div>
                                         <div className="col-6">
                                             <h6>
@@ -63,35 +68,34 @@ const UpcomingComponent = (props) =>
                                         </div>
                                     </div>
 
-                                    <p>
-                                        {/* decode html */}
-                                        {nextShow.description}
-                                    </p>
+                                    <p dangerouslySetInnerHTML={{ __html: nextShow.description }}></p>
 
                                     <div className="row">
-                                        <div className="col-6">
-
-                                            {/* conditionally show this is url is not null */}
-                                            {/* @if (!string.IsNullOrWhiteSpace(Model.Url)) */}
-
-                                            <Link target="_blank" alt="location" to={nextShow.url}>
-                                                <span className="fa fa-2x fa-globe fa-fw"></span>{nextShow.title}
-                                            </Link>
-
-                                        </div>
 
                                         <div className="col-6">
                                             <Link target="_blank" alt="location" to={nextShow.mapUrl}>
                                                 <span className="fa fa-2x fa-map-marker"></span>&nbsp;Map
                                             </Link>
                                         </div>
+
+                                        <div className="col-6">
+                                            {
+                                                (nextShow.url !== null) ?
+                                                <Link target="_blank" alt="location" to={nextShow.url}>
+                                                    <span className="fa fa-2x fa-globe fa-fw"></span>{nextShow.title}
+                                                </Link>
+                                                : ""
+                                            }
+                                        </div>
+
                                     </div>
 
-                                    <Link to="/Shows"
-                                        className="butn medium theme mt-4">
-                                        <span>More Shows</span>
-                                    </Link>
-
+                                    <div className="text-center my-3">
+                                        <Link to="/Shows"
+                                            className="butn medium theme mt-4">
+                                            <span>More Shows</span>
+                                        </Link>
+                                    </div>
                                 </div>
 
                             </div>

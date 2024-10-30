@@ -37,7 +37,7 @@ const FooterComponent = (props) =>
                 <div className="row">
                     <div className="col-md-12 pe-lg-0">
                         <ul className="footer-list mb-2 mb-md-0 ps-0">
-                            <li><a href="/Index" title="">Home</a></li>
+                            <li><a href="/" title="">Home</a></li>
                             <li><a href="/About" title="">About</a></li>
                             <li><a href="/Shows" title="Shows">Shows</a></li>
                             <li><a href="/Gallery" title="">Gallery</a></li>

@@ -1,13 +1,13 @@
 import React from 'react';
-import PageTitleComponent from './PageTitleComponent';
-import AboutComponent from './AboutComponent';
+import HomePageTitleComponent from './HomePageTitleComponent';
+import AboutComponent from './AboutElleHomeComponent';
 import UpcomingComponent from './UpcomingComponent';
 
 const HomeComponent = (props) =>
 {
     return (
         <div>
-          <PageTitleComponent />
+          <HomePageTitleComponent />
           <AboutComponent />
           <UpcomingComponent />
         </div>
