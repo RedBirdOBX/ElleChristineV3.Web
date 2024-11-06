@@ -5,6 +5,7 @@ import FooterComponent from './Components/FooterComponent';
 import HomeComponent from './Components/Home/HomeComponent';
 import AboutComponent from './Components/About/AboutComponent';
 import ShowsComponent from './Components/Shows/ShowsComponent';
+import GalleryComponent from './Components/Gallery/GalleryComponent';
 
 const App = () =>
 {
@@ -18,6 +19,7 @@ const App = () =>
                     <Route exact path="/" element={<HomeComponent />} />
                     <Route exact path="/About" element={<AboutComponent />} />
                     <Route exact path="/Shows" element={<ShowsComponent />} />
+                    <Route exact path="/Gallery" element={<GalleryComponent />} />
                 </Routes>
                 <FooterComponent />
             </BrowserRouter>

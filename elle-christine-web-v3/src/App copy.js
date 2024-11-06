@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import PhotoList from './Components/PhotoList';
+import PhotoList from './Components/Gallery/PhotoList';
 
 const initPhotos =
 [
