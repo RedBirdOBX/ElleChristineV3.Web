@@ -7,8 +7,6 @@ const Photo = (props) =>
     const dataSubHtml = `<h4 class='text-white'>${props.photo.heading}</h4><p>${props.photo.description}</p>`;
 
     return (
-        <div>
-
             <div className="col-md-6 col-lg-4 mt-1-9 wow fadeIn"
                     data-wow-delay="100ms"
                     data-src={fileName}
@@ -27,7 +25,6 @@ const Photo = (props) =>
                     </a>
                 </div>
             </div>
-        </div>
     );
 };
 

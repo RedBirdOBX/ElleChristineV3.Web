@@ -49,7 +49,7 @@ const GalleryComponent = (props) =>
 
 
     return (
-        <div>
+        <>
             <GalleryPageTitleComponent />
 
             <section>
@@ -61,7 +61,7 @@ const GalleryComponent = (props) =>
                             <p className="w-md-75 w-lg-55">A collection of the latest pictures and videos.</p>
                         </div>
                         <div className="col-12">
-                            <div className="horizontaltab">
+                            <div className="horizontaltab" style={{ display: "block", width: "100%", margin: "0px" }}>
                                 <ul className="resp-tabs-list hor_1">
                                     <li><i className="fas fa-image"></i> Photos</li>
                                     <li><i className="fas fa-photo-video"></i> Videos</li>
@@ -88,7 +88,7 @@ const GalleryComponent = (props) =>
                 </div>
             </section>
 
-        </div>
+        </>
     );
 };
 
