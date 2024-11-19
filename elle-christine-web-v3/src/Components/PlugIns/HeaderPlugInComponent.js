@@ -1,15 +1,15 @@
 import React from 'react';
-import NavComponent from './NavComponent';
+import NavPlugInComponent from './NavPlugInComponent';
 
-const HeaderComponent = (props) =>
+const HeaderPlugInComponent = () =>
 {
     return (
         <div>
             <header className="header-style1 menu_area-light">
-               <NavComponent />
+               <NavPlugInComponent />
             </header>
         </div>
     );
 };
 
-export default HeaderComponent;
+export default HeaderPlugInComponent;

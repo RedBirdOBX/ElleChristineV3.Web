@@ -1,33 +1,11 @@
+import PhotosTitleComponent from './PhotosTitleComponent';
+import PhotoListComponent from './PhotoListComponent';
 import React, { useState, useEffect } from 'react';
-import PhotoList from './Components/Gallery/PhotoList';
 
-const initPhotos =
-[
-    {
-        "id": 25,
-        "fileName": "09132024-1.jpg",
-        "heading": "Elle Christine and band",
-        "description": "Elle Christine at Bryan Park Bar and Grill, September 2024",
-        "photoDate": "2024-09-13T00:00:00",
-        "added": "2024-09-16T00:00:00",
-        "active": true
-    },
-    {
-        "id": 26,
-        "fileName": "09132024-2.jpg",
-        "heading": "Elle Christine and band",
-        "description": "Shane Fowlkes on Drums",
-        "photoDate": "2024-09-13T00:00:00",
-        "added": "2024-09-16T00:00:00",
-        "active": true,
-    }
-];
-
-
-const App = () =>
+const PhotosPageComponent = (props) =>
 {
 
-    const [photoData, setPhotoData] = useState(initPhotos);
+    const [photoData, setPhotoData] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
 
@@ -58,7 +36,6 @@ const App = () =>
         fetchPhotos();
     }, []);
 
-
     if (isLoading)
     {
         return (<div>Loading...</div>);
@@ -71,10 +48,28 @@ const App = () =>
 
 
     return (
-        <div>
-            { <PhotoList photos={photoData}/> }
-        </div>
+        <>
+            <PhotosTitleComponent />
+
+            <section>
+                <div className="container">
+
+                    <div className="row mb-1-9 mb-lg-6 box-hover">
+                        <div className="section-heading col-12">
+                            <h2>Elle Christine Photo Gallery</h2>
+                            <p className="w-md-75 w-lg-55">A collection of the latest photos.</p>
+                        </div>
+
+                        <div className="col-12">
+                        { <PhotoListComponent photos={photoData}/> }
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </>
     );
 };
 
-export default App;
+export default PhotosPageComponent;

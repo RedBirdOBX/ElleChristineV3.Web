@@ -1,11 +1,16 @@
-import React, { useState, useEffect } from 'react';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
-import HeaderComponent from './Components/HeaderComponent';
-import FooterComponent from './Components/FooterComponent';
-import HomeComponent from './Components/Home/HomeComponent';
-import AboutComponent from './Components/About/AboutComponent';
-import ShowsComponent from './Components/Shows/ShowsComponent';
-import GalleryComponent from './Components/Gallery/GalleryComponent';
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+import HeaderPlugInComponent from './Components/PlugIns/HeaderPlugInComponent';
+import FooterPlugInComponent from './Components/PlugIns/FooterPlugInComponent';
+
+import HomePageComponent from './Components/Pages/Home/HomePageComponent';
+import AboutPageComponent from './Components/Pages/About/AboutPageComponent';
+import ShowsPageComponent from './Components/Pages/Shows/ShowsPageComponent';
+import PhotosPageComponent from './Components/Pages/Photos/PhotosPageComponent';
+import VideosPageComponent from './Components/Pages/Videos/VideosPageComponent';
+import MediaPageComponent from './Components/Pages/Media/MediaPageComponent';
+
 
 const App = () =>
 {
@@ -14,14 +19,16 @@ const App = () =>
         <div>
             <BrowserRouter>
 
-                <HeaderComponent />
+                <HeaderPlugInComponent />
                 <Routes>
-                    <Route exact path="/" element={<HomeComponent />} />
-                    <Route exact path="/About" element={<AboutComponent />} />
-                    <Route exact path="/Shows" element={<ShowsComponent />} />
-                    <Route exact path="/Gallery" element={<GalleryComponent />} />
+                    <Route exact path="/" element={<HomePageComponent />} />
+                    <Route exact path="/About" element={<AboutPageComponent />} />
+                    <Route exact path="/Shows" element={<ShowsPageComponent />} />
+                    <Route exact path="/Photos" element={<PhotosPageComponent />} />
+                    <Route exact path="/Videos" element={<VideosPageComponent />} />
+                    <Route exact path="/Media" element={<MediaPageComponent />} />
                 </Routes>
-                <FooterComponent />
+                <FooterPlugInComponent />
             </BrowserRouter>
         </div>
     );

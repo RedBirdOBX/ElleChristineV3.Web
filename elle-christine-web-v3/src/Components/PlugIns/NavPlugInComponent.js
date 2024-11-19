@@ -1,7 +1,7 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-const NavComponent = (props) =>
+const NavPluginComponent = () =>
 {
     return (
         <div className="navbar-default border-bottom border-color-light-white">
@@ -13,11 +13,11 @@ const NavComponent = (props) =>
 
                                 <div className="navbar-header navbar-header-custom">
                                     <a href="/"
-                                        className="navbar-brand h-default">
+                                            className="navbar-brand h-default">
                                         <img id="logo"
-                                            src="imgs/logos/header-logo.png"
-                                            alt="Elle Christine - original singer, songwriter from Richmond, VA"
-                                            title="Elle Christine - original singer, songwriter from Richmond, VA" />
+                                                src="imgs/logos/header-logo.png"
+                                                alt="Elle Christine - original singer, songwriter from Richmond, VA"
+                                                title="Elle Christine - original singer, songwriter from Richmond, VA" />
                                     </a>
                                 </div>
 
@@ -35,13 +35,24 @@ const NavComponent = (props) =>
                                         </Link>
                                     </li>
                                     <li>
-                                        <a href="/Shows" title="Shows">Shows</a>
+                                        <Link to="/Shows">
+                                            Shows
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a href="/Gallery" title="Gallery">Gallery</a>
+                                        <Link to="/Photos">
+                                            Photos
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a href="/Media" title="Media">Media</a>
+                                        <Link to="/Videos">
+                                            Videos
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/Media">
+                                            Media
+                                        </Link>
                                     </li>
                                 </ul>
                             </nav>
@@ -53,4 +64,4 @@ const NavComponent = (props) =>
     );
 };
 
-export default NavComponent;
+export default NavPluginComponent;

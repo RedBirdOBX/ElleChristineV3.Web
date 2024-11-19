@@ -1,6 +1,6 @@
 import React from 'react';
 
-const AboutBandAboutComponent = (props) =>
+const AboutBandComponent = (props) =>
 {
     return (
             <section className="bg-light-gray">
@@ -39,7 +39,7 @@ const AboutBandAboutComponent = (props) =>
                             <div className="team-members">
                                 <div className="team-members-img">
                                     <img alt="Shane Fowlkes"
-                                        src="imgs/content/about/shane-fowlkes.jpg" />
+                                            src="imgs/content/about/shane-fowlkes.jpg" />
                                 </div>
                                 <div className="team-members-text">
                                     <h4>Shane Fowlkes</h4>
@@ -65,4 +65,4 @@ const AboutBandAboutComponent = (props) =>
     );
 };
 
-export default AboutBandAboutComponent;
+export default AboutBandComponent;

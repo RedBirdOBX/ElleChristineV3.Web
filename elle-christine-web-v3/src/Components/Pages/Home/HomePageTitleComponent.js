@@ -7,9 +7,9 @@ const HomePageTitleComponent = (props) =>
 
     return (
             <section className="bg-img banner-section cover-background full-screen left-overlay-dark top-position1"
-                    data-overlay-dark="5"
-                    style={{backgroundImage: `url(imgs/page-titles/home${imgNumber}.jpg)`}}
-                    id="PageTitleSection">
+                        data-overlay-dark="5"
+                        style={{backgroundImage: `url(imgs/page-titles/home${imgNumber}.jpg)`}}
+                        id="PageTitleSection">
 
                 <div className="container position-absolute top-50 start-50 translate-middle z-index-9">
 

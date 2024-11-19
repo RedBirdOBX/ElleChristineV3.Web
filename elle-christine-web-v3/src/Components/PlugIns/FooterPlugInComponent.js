@@ -1,6 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const FooterComponent = (props) =>
+const FooterPlugInComponent = (props) =>
 {
     return (
 <footer>
@@ -13,19 +14,25 @@ const FooterComponent = (props) =>
                 <div className="mt-1-9 footer-social-icons">
                     <ul className="ps-0">
                         <li>
-                            <a href="https://www.facebook.com/ElleChristineMusic" target="_blank">
+                            <Link to="https://www.facebook.com/ElleChristineMusic"
+                                    target="_blank"
+                                    title="Facebook">
                                 <span className="fab fa-facebook-f"></span>
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a href="https://www.instagram.com/ellechristinemusic" target="_blank">
+                            <Link to="https://www.instagram.com/ellechristinemusicc"
+                                    target="_blank"
+                                    title="Instagram">
                                 <span className="fab fa-instagram"></span>
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a href="https://www.youtube.com/@@ellechristinemusic" target="_blank">
+                            <Link to="https://www.youtube.com/@@ellechristinemusic"
+                                    target="_blank"
+                                    title="YouTube">
                                 <span className="fab fa-youtube"></span>
-                            </a>
+                            </Link>
                         </li>
                     </ul>
                 </div>
@@ -35,13 +42,18 @@ const FooterComponent = (props) =>
             <div className="col-md-6 col-lg-4 mt-1-9">
                 <h3 className="footer-title-style2 text-primary">Quick Links</h3>
                 <div className="row">
-                    <div className="col-md-12 pe-lg-0">
+                    <div className="col-md-6 pe-lg-0">
                         <ul className="footer-list mb-2 mb-md-0 ps-0">
-                            <li><a href="/" title="">Home</a></li>
-                            <li><a href="/About" title="">About</a></li>
-                            <li><a href="/Shows" title="Shows">Shows</a></li>
-                            <li><a href="/Gallery" title="">Gallery</a></li>
-                            <li><a href="/Media" title="">Media</a></li>
+                            <li><Link to="/" title="Home">Home</Link></li>
+                            <li><Link to="/About" title="About">About</Link></li>
+                            <li><Link to="/Shows" title="Shows">Shows</Link></li>
+                        </ul>
+                    </div>
+                    <div className="col-md-6 pe-lg-0">
+                        <ul className="footer-list mb-2 mb-md-0 ps-0">
+                            <li><Link to="/Photos" title="Photos">Photos</Link></li>
+                            <li><Link to="/Videos" title="Videos">Videos</Link></li>
+                            <li><Link to="/Media" title="Media">Media</Link></li>
                         </ul>
                     </div>
                 </div>
@@ -77,7 +89,7 @@ const FooterComponent = (props) =>
             <div className="row">
                 <div className="col-md-6 text-center text-md-start mb-2 mb-md-0">
                     <p>
-                        Elle Christine
+                        Elle Christine&nbsp;
                         <span className="current-year"></span>. All Rights Reserved.
                     </p>
                 </div>
@@ -88,4 +100,4 @@ const FooterComponent = (props) =>
     );
 };
 
-export default FooterComponent;
+export default FooterPlugInComponent;

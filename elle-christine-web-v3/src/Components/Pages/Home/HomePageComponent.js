@@ -1,17 +1,17 @@
 import React from 'react';
 import HomePageTitleComponent from './HomePageTitleComponent';
-import AboutComponent from './AboutElleHomeComponent';
+import AboutElleHomeComponent from './AboutElleHomeComponent';
 import UpcomingComponent from './UpcomingComponent';
 
-const HomeComponent = (props) =>
+const HomePageComponent = (props) =>
 {
     return (
         <div>
           <HomePageTitleComponent />
-          <AboutComponent />
+          <AboutElleHomeComponent />
           <UpcomingComponent />
         </div>
     );
 };
 
-export default HomeComponent;
+export default HomePageComponent;
