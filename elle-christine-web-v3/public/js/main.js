@@ -228,7 +228,8 @@
             10. FullScreenHeight function
         --------------------------------------*/
 
-        function fullScreenHeight() {
+        function fullScreenHeight()
+        {
             var element = $(".full-screen");
             var $minheight = $window.height();
             element.css('min-height', $minheight);
@@ -249,7 +250,8 @@
             12. FullScreenHeight and screenHeight with resize function
         --------------------------------------*/
 
-        function SetResizeContent() {
+        function SetResizeContent()
+        {
             fullScreenHeight();
             ScreenFixedHeight();
         }
@@ -258,6 +260,9 @@
 
     // === when document ready === //
     $(document).ready(function() {
+
+        // calling to readjust height
+        SetResizeContent();
 
         /*------------------------------------
             13. Chart

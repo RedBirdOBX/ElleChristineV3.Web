@@ -47,7 +47,7 @@ const AboutBandComponent = (props) =>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-12 col-lg-6 mt-1-9">
+                        <div className="col-sm-12 col-lg-6 mt-1-9">
                             <div className="team-members">
                                 <div className="team-members-img">
                                     <img alt="Joe"
