@@ -23,15 +23,10 @@ const AboutElleComponent = (props) =>
 
                                 <p>&nbsp;</p>
                                 <p>&nbsp;</p>
-                                <p>&nbsp;</p>
-                                <p>&nbsp;</p>
                             </div>
                         </div>
-                        <div className="col-lg-6 d-none d-lg-block">
-                            <div className="bg-img cover-background box-shadow-primary h-100"
-                                    data-overlay-dark="0"
-                                    style={{backgroundImage: `url(imgs/content/about/about-elle.jpg)`}}
-                                    alt="About Elle" />
+                        <div className="col-lg-6">
+                            <img alt="About Elle" src="imgs/content/about/about-elle.jpg" />
                         </div>
                     </div>
 
