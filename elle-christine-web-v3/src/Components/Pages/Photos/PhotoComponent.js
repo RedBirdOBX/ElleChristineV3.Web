@@ -2,7 +2,7 @@ import React from 'react';
 
 const Photo = (props) =>
 {
-    const imgPath = "https://elle-christine-web.azurewebsites.net/imgs/content/gallery/" + props.photo.fileName;
+    const imgPath = "https://salmon-mud-02606f80f.5.azurestaticapps.net/imgs/content/gallery/" + props.photo.fileName;
     const fileName = `imgs/content/gallery/${props.photo.fileName}`;
     const dataSubHtml = `<h4 class='text-white'>${props.photo.heading}</h4><p>${props.photo.description}</p>`;
 
