@@ -41,17 +41,17 @@ const ShowCompnent = (props) =>
 
                                     <div className="row">
 
-                                        <div className="col-6">
+                                        <div className="col-2">
                                             <Link target="_blank" alt="location" to={props.show.mapUrl}>
-                                                <span className="fa fa-2x fa-map-marker"></span>&nbsp;Map
+                                                <span className="fa fa-map-marker"></span>&nbsp;Map
                                             </Link>
                                         </div>
 
-                                        <div className="col-6">
+                                        <div className="col-10">
                                             {
                                                 (props.show.url !== null) ?
                                                 <Link target="_blank" alt="location" to={props.show.url}>
-                                                    <span className="fa fa-2x fa-globe fa-fw"></span>{props.show.title}
+                                                    <span className="fa fa-globe fa-fw"></span>{props.show.title}
                                                 </Link>
                                                 : ""
                                             }
