@@ -9,30 +9,19 @@
         {
             "format" : "expanded",
             "extensionName": ".css",
-            //"savePath": "~/../css",
-            "savePath": null,
-            "savePathReplacementPairs":
-            {
-                "/sass/" : "/css/"
-            }
+            "savePath": "/elle-christine-web-v3/public/css",
+            "savePathReplacementPairs": null,
         },
         {
             "format": "compressed",
-            "extensionName": "-x-min.css",
-            "savePath": null,
+            "extensionName": ".min.css",
+            "savePath": "/elle-christine-web-v3/public/css",
             "savePathReplacementPairs": null,
             "generateMap": false
         }
     ],
-    "liveSassCompile.settings.excludeList":
+    "liveSassCompile.settings.includeItems":
     [
-        "/**/node_modules/**",
-        "/.vscode/**",
-        "/public/css/bootstrap/scss/**"
+        "/elle-christine-web-v3/public/scss/custom.scss",
     ]
-
-    // "liveSassCompile.settings.includeItems":
-    // [
-    //     "file...."
-    // ]
 }
