@@ -1,0 +1,38 @@
+{
+    "editor.fontSize": 16,
+    "liveSassCompile.settings.compilerOnWatch": false,
+    "liveSassCompile.settings.watchOnLaunch": true,
+    "liveSassCompile.settings.useNewCompiler": true,
+    "liveSassCompile.settings.showOutputWindowOn": "Warning",
+    "liveSassCompile.settings.formats":
+    [
+        {
+            "format" : "expanded",
+            "extensionName": ".css",
+            //"savePath": "~/../css",
+            "savePath": null,
+            "savePathReplacementPairs":
+            {
+                "/sass/" : "/css/"
+            }
+        },
+        {
+            "format": "compressed",
+            "extensionName": "-x-min.css",
+            "savePath": null,
+            "savePathReplacementPairs": null,
+            "generateMap": false
+        }
+    ],
+    "liveSassCompile.settings.excludeList":
+    [
+        "/**/node_modules/**",
+        "/.vscode/**",
+        "/public/css/bootstrap/scss/**"
+    ]
+
+    // "liveSassCompile.settings.includeItems":
+    // [
+    //     "file...."
+    // ]
+}

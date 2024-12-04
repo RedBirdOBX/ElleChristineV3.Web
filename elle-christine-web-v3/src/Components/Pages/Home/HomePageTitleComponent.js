@@ -19,7 +19,7 @@ const HomePageTitleComponent = (props) =>
 
                     <div className="row align-items-center">
                         <div className="col-lg-8 col-xxl-6">
-                            <h1 className="display-lg-6 mb-3 mb-lg-4 text-white">
+                            <h1 id="HomeTitle" className="display-lg-6 mb-3 mb-lg-4 text-white">
                                 ELLE CHRISTINE
                             </h1>
                             <p className="w-md-95 lead text-white opacity7 d-none d-sm-block">
