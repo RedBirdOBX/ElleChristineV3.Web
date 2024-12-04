@@ -2,7 +2,11 @@
 
 ## Overview
 
-Web Site for Richmond, VA artist "Elle Christine".  React.js v18 for presentation. MS .NET 8 backend Restful API for Shows, Photos, and Videos.
+Web Site for Richmond, VA artist "Elle Christine".  React.js v18 for presentation.
+MS .NET 8 backend Restful API for Shows, Photos, and Videos.
+
+<www.ellechristine.com>
+
 
 ## Tech Stack
 - React.js v18
