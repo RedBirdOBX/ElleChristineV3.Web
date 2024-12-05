@@ -1,0 +1,27 @@
+{
+    "editor.fontSize": 16,
+    "liveSassCompile.settings.compilerOnWatch": false,
+    "liveSassCompile.settings.watchOnLaunch": true,
+    "liveSassCompile.settings.useNewCompiler": true,
+    "liveSassCompile.settings.showOutputWindowOn": "Warning",
+    "liveSassCompile.settings.formats":
+    [
+        {
+            "format" : "expanded",
+            "extensionName": ".css",
+            "savePath": "/elle-christine-web-v3/public/css",
+            "savePathReplacementPairs": null,
+        },
+        {
+            "format": "compressed",
+            "extensionName": ".min.css",
+            "savePath": "/elle-christine-web-v3/public/css",
+            "savePathReplacementPairs": null,
+            "generateMap": false
+        }
+    ],
+    "liveSassCompile.settings.includeItems":
+    [
+        "/elle-christine-web-v3/public/scss/custom.scss",
+    ]
+}
