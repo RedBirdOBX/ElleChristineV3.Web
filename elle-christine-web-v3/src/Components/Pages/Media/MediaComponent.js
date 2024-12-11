@@ -17,7 +17,7 @@ const MediaComponent = (props) =>
                                         <div className="row g-0">
 
                                             <div className="col-md-3 p-3 text-center">
-                                                <img alt="Bandcamp" src="imgs/logos/bandcamp.png" />
+                                                <img alt="Bandcamp" src="imgs/logos/BandCamp.png" />
                                             </div>
 
                                             <div className="col-md-9">
