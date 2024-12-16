@@ -16,3 +16,8 @@ MS .NET 8 backend Restful API for Shows, Photos, and Videos.
 - JavaScript
 - TypeScript (custom)
 - SCSS (custom)
+
+## React Node Libraries
+-  Wow
+- - https://stackoverflow.com/questions/70268322/how-to-use-wow-js-or-any-other-library-in-react
+
