@@ -1861,7 +1861,7 @@
             $(this).addClass('active').siblings().removeClass('active');
         });
 
-        $('.portfolio-gallery,.portfolio-gallery-isotope').lightGallery();
+        //$('.portfolio-gallery,.portfolio-gallery-isotope').lightGallery();
 
         $('.portfolio-link').on('click', (e) => {
             e.stopPropagation();
