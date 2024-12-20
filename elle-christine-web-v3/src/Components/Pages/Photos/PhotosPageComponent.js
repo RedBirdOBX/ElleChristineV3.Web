@@ -1,5 +1,5 @@
 import PhotosTitleComponent from './PhotosTitleComponent';
-import PhotoListComponent from './PhotoListComponent';
+import PhotoGalleryComponent from './PhotoGalleryComponent';
 import React, { useState, useEffect } from 'react';
 
 const PhotosPageComponent = (props) =>
@@ -61,7 +61,9 @@ const PhotosPageComponent = (props) =>
                         </div>
 
                         <div className="col-12">
-                        { <PhotoListComponent photos={photoData}/> }
+                        {
+                            <PhotoGalleryComponent photos={photoData}/>
+                        }
                         </div>
                     </div>
 

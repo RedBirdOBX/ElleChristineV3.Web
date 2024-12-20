@@ -17,7 +17,11 @@ MS .NET 8 backend Restful API for Shows, Photos, and Videos.
 - TypeScript (custom)
 - SCSS (custom)
 
-## React Node Libraries
--  Wow
-- - https://stackoverflow.com/questions/70268322/how-to-use-wow-js-or-any-other-library-in-react
-
+## Required React Node.js Libraries
+- Wow : https://stackoverflow.com/questions/70268322/how-to-use-wow-js-or-any-other-library-in-react
+- LightGalleryJs - https://www.lightgalleryjs.com/
+- LighGallery Plugins:
+    - Zoom from 'lightgallery/plugins/zoom';
+    - Video from 'lightgallery/plugins/video';
+    - FullScreen from 'lightgallery/plugins/fullscreen';
+    - FlickGallery from 'flickr-justified-gallery';
