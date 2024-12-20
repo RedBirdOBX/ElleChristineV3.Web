@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 const Photo = (props) =>
 {
@@ -9,13 +9,14 @@ const Photo = (props) =>
     const heightWidth = `${props.photo.height}-${props.photo.width}`;
 
     return (
-                <a data-lg-size={heightWidth}
+                <a href="!#"
+                    data-lg-size={heightWidth}
                     data-pinterest-text={text}
                     data-tweet-text={text}
                     className="gallery__item"
                     data-src={fileName}
                     data-sub-html={dataSubHtml}>
-                    <img className="img-responsive" src={imgPath} />
+                    <img alt={props.photo.description} className="img-responsive" src={imgPath} />
                 </a>
 
     );
