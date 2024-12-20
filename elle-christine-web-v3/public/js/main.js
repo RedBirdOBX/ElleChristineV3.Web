@@ -1861,6 +1861,7 @@
             $(this).addClass('active').siblings().removeClass('active');
         });
 
+        // no longer needed
         //$('.portfolio-gallery,.portfolio-gallery-isotope').lightGallery();
 
         $('.portfolio-link').on('click', (e) => {
